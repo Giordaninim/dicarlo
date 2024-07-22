@@ -62,8 +62,10 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: space-between;
-    background-color: #363945;
-   
+    background-color: #36454F;
+    > a {
+        text-decoration: none;
+    }
 }
 
 @media screen and (max-width: 678px) {
@@ -88,7 +90,7 @@
         color:aliceblue;
         font-size: xx-small;
         font-family: "Source Sans Pro", "Courier New", monospace;
-        text-decoration: none; 
+         
        
     
 }
