@@ -1,6 +1,6 @@
  .container {
     display: grid;
-    grid-template-rows: 80px auto 1fr auto 50px;
+    grid-template-rows: 80px 40px 1fr auto 140px;
     grid-template-columns: 1fr 4fr 1fr;
     /*height: 100vh;*/
     grid-template-areas:
@@ -9,7 +9,7 @@
         "left-aside     main            right-aside"
         "left-aside     low-content     right-aside"
         "footer         footer          footer";
-    grid-gap: 10px;
+    grid-gap: 1px;
     padding: 10px;
     font-weight: 600;
     font-size: 20px;
@@ -25,6 +25,8 @@
     opacity: 0.8;
     color:aliceblue;
     text-shadow: 2px 2px blueviolet;
+    align-content: center;
+    text-align: center;
 }
 .header         {
     grid-area: header;
@@ -34,6 +36,7 @@
 .banner         {
     grid-area: banner;
     background-color: red;
+    align-content: center;
 }
 .left-aside     {
     grid-area: left-aside;
@@ -45,7 +48,7 @@
 }
 .main           {
     grid-area: main;
-    background-color: lightskyblue; height: 500px;}
+    background-color: lightskyblue; height: 600px;}
 .low-content    {
     grid-area: low-content;
     background-color: red;
@@ -64,8 +67,27 @@
     align-content: space-between;
     background-color: #36454F;
     > a {
+        margin-top: 15px;
         text-decoration: none;
+        background-color: aliceblue;
+        padding: 2px;
+        border-radius: 20%;
     }
+}
+
+.footer {
+    display: flex;
+
+    /* flex-wrap: nowrap; */
+    justify-content: center;
+    
+    .linkfooter {
+    >a >button:hover{
+        background-color: darkorange;
+        transform: scale(1.2);
+
+    }
+}
 }
 
 @media screen and (max-width: 678px) {
@@ -90,11 +112,13 @@
         color:aliceblue;
         font-size: xx-small;
         font-family: "Source Sans Pro", "Courier New", monospace;
-         
-       
+    }
+.linkfooter {
+    > a > button {
+        background-color: orange;
+    }
     
 }
-
 
 
 
