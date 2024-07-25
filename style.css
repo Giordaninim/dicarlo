@@ -10,32 +10,38 @@
          "left-aside     low-content     right-aside"
          "footer         footer          footer";
      grid-gap: 1px;
-     padding: 10px;
+     padding: 1px;
      font-weight: 600;
      font-size: 20px;
  }
 
- .placeholder {
-     width: 30%;
-     background-color: #363945;
+ 
 
- }
-
- #name {
-     width: 30%;
-     background-color: #363945;
-     opacity: 0.8;
-     color: aliceblue;
-     text-shadow: 2px 2px blueviolet;
-     align-content: center;
-     text-align: center;
- }
+ 
 
  .header {
-     grid-area: header;
-     background-color: #36454F;
-     display: flex;
- }
+    grid-area: header;
+    background-color: #0b111d;
+    display: flex;
+    .placeholder {
+        width: 30%;
+        img {
+            height: 80px;
+        }
+    }
+    #name {
+        width: 30%;
+        opacity: 0.8;
+        color: aliceblue;
+        text-shadow: -15px 18px 3px #fea606;
+        align-content: center;
+        text-align: center;
+        a { color: #fea606;
+            text-decoration: none;
+        }
+    }
+}
+    
 
  .banner {
      grid-area: banner;
@@ -76,12 +82,11 @@
      justify-content: space-around;
      flex-wrap: wrap;
      align-content: space-between;
-     background-color: #36454F;
 
      >a {
          margin-top: 15px;
          text-decoration: none;
-         background-color: aliceblue;
+         background-color: #fefefe;
          padding: 2px;
          border-radius: 20%;
      }
@@ -95,7 +100,7 @@
 
      .linkfooter {
          >a>button:hover {
-             background-color: darkorange;
+             background-color: #fea606;
              transform: scale(1.2);
 
          }
@@ -117,22 +122,39 @@
          font-size: medium;
      }
 
-     #name {
-         text-align: center;
-         align-content: center;
-     }
+     
 
-     .linktab>a {
-         color: aliceblue;
-         font-size: xx-small;
-         font-family: "Source Sans Pro", "Courier New", monospace;
-     }
+     
 
      .linkfooter {
          >a>button {
-             background-color: orange;
+             background-color: #fea606;
          }
 
+     }
+     .header {
+        flex-direction: row;
+        justify-content: space-evenly;
+        #name {
+            text-align: center;
+            align-content: center;
+            text-shadow:  -1px 0px 20px #fea606;   
+        }
+       
+        .placeholder {
+            width: auto;
+            img {height:50px;}
+        }
+        .linktab {
+            width: 50%;
+            justify-content: space-evenly;
+            text-shadow: -1px 2px 31px #fea606;
+            a {
+            color: #0b111d;
+            font-size: xx-small;
+            font-family: "Source Sans Pro", "Courier New", monospace;
+            }
+    }
      }
 
 
