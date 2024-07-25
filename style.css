@@ -126,9 +126,6 @@
      }
 
      
-
-     
-
      .linkfooter {
          >a>button {
              background-color: #fea606;
@@ -138,12 +135,21 @@
      .header {
         flex-direction: row;
         justify-content: space-evenly;
+               
         #name {
-            text-align: center;
+            width: 30%;
+            opacity: 0.8;
+            color: aliceblue;
+            text-shadow: -1px 0px 20px #fea606;
             align-content: center;
-            text-shadow:  -1px 0px 20px #fea606;   
+            text-align: center;
+            margin-top: 0px;
+            margin-left: 0px;
+            a { color: #fea606;
+                text-decoration: none;
+                font-size:large;
+            }
         }
-       
         .placeholder {
             width: auto;
             img {height:50px;}
