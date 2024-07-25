@@ -33,11 +33,14 @@
         width: 30%;
         opacity: 0.8;
         color: aliceblue;
-        text-shadow: -15px 18px 3px #fea606;
-        align-content: center;
+        text-shadow: -27px 29px 6px #fea606;
+        align-content: baseline;
         text-align: center;
+        margin-top: 7px;
+        margin-left: 5px;
         a { color: #fea606;
             text-decoration: none;
+            font-size:xx-large;
         }
     }
 }
