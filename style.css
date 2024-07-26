@@ -110,8 +110,11 @@
         } a:hover {
             background-color: #fea606;
             transform: scale(1.2);
-        }        
-     }
+        }
+    }
+    .social > span > a> img {
+        width: 35px;
+    }
 }
 /*######################################*/
  
@@ -120,7 +123,7 @@
         margin: 2px;
     }
     .container {
-        grid-template-rows: 50px 50px 50px 1fr 50px 50px 50px;
+        grid-template-rows: 50px 25px 50px 1fr 50px 25px 50px;
         grid-template-columns: 1fr;
         grid-template-areas:
             "header"
@@ -170,5 +173,12 @@
         font-size: xx-small;
         font-family: "Source Sans Pro", "Courier New", monospace;
         justify-content: flex-start;
+        .social > span > a> img {
+            width: 32px;
+           
+        }
+        #wapp{
+            margin-top: 3px;
+        }
     }
 }
