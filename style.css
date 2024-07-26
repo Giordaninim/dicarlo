@@ -17,8 +17,6 @@
 
  
 
- 
-
  .header {
     grid-area: header;
     background-color: #0b111d;
@@ -43,99 +41,102 @@
             font-size:xx-large;
         }
     }
+    .linktab {
+        display: flex;
+        width: 40%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: space-between;
+   
+        >a {
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #fefefe;
+            padding: 2px;
+            border-radius: 20%;
+        }
+    }
 }
     
 
- .banner {
-     grid-area: banner;
-     background-color: red;
-     align-content: center;
+.banner {
+    grid-area: banner;
+    background-color: red;
+    align-content: center;
+}
+
+.left-aside {
+    grid-area: left-aside;
+    background-color: green;
+}
+
+.right-aside {
+    grid-area: right-aside;
+    background-color: yellow;
+}
+
+.main {
+    grid-area: main;
+    background-color: lightskyblue;
+    height: 600px;
  }
 
- .left-aside {
-     grid-area: left-aside;
-     background-color: green;
- }
+.low-content {
+    grid-area: low-content;
+    background-color: red;
+}
 
- .right-aside {
-     grid-area: right-aside;
-     background-color: yellow;
- }
+.footer {
+    grid-area: footer;
+    background-color: rgb(151, 151, 50);
+}
 
- .main {
-     grid-area: main;
-     background-color: lightskyblue;
-     height: 600px;
- }
-
- .low-content {
-     grid-area: low-content;
-     background-color: red;
- }
-
- .footer {
-     grid-area: footer;
-     background-color: rgb(151, 151, 50);
- }
-
-
- .linktab {
-     display: flex;
-     width: 40%;
-     justify-content: space-around;
-     flex-wrap: wrap;
-     align-content: space-between;
-
-     >a {
-         margin-top: 15px;
-         text-decoration: none;
-         background-color: #fefefe;
-         padding: 2px;
-         border-radius: 20%;
-     }
- }
-
- .footer {
-     display: flex;
+.footer {
+    display: flex;
 
      /* flex-wrap: nowrap; */
-     justify-content: center;
+    justify-content: center;
+    background-color: #0b111d;
 
-     .linkfooter {
-         >a>button:hover {
-             background-color: #fea606;
-             transform: scale(1.2);
-
-         }
+    .linkfooter {
+        margin-top: 10px;
+        
+        a {
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #fefefe;
+            padding: 2px;
+            border-radius: 20%;
+        } a:hover {
+            background-color: #fea606;
+            transform: scale(1.2);
+        }        
      }
- }
-
- @media screen and (max-width: 678px) {
-     .container {
-         grid-template-rows: 50px 50px 50px 1fr 50px 50px 50px;
-         grid-template-columns: 1fr;
-         grid-template-areas:
-             "header"
-             "banner"
-             "left-aside"
-             "main"
-             "right-aside"
-             "low-content"
-             "footer";
-         font-size: medium;
-     }
-
-     
-     .linkfooter {
-         >a>button {
-             background-color: #fea606;
-         }
-
-     }
-     .header {
+}
+/*######################################*/
+ 
+@media screen and (max-width: 678px) {
+    body {
+        margin: 2px;
+    }
+    .container {
+        grid-template-rows: 50px 50px 50px 1fr 50px 50px 50px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "banner"
+            "left-aside"
+            "main"
+            "right-aside"
+            "low-content"
+            "footer";
+        font-size: medium;
+        padding: 1px;
+    }
+    
+    .header {
         flex-direction: row;
-        justify-content: space-evenly;
-               
+        justify-content: space-evenly;    
         #name {
             width: 30%;
             opacity: 0.8;
@@ -163,13 +164,11 @@
             font-size: xx-small;
             font-family: "Source Sans Pro", "Courier New", monospace;
             }
+        }
     }
-     }
-
-
-
-
-
-
-
- }
+    .footer{
+        font-size: xx-small;
+        font-family: "Source Sans Pro", "Courier New", monospace;
+        justify-content: flex-start;
+    }
+}
