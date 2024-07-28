@@ -4,9 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home222</title>
     <link rel="stylesheet" href="style.css">
+<style>
+      body {
+            font-family: 'Lato', sans-serif;
+        }
 
+        .overlay {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0, 0.9);
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay {overflow-y: auto;}
+            .overlay a {font-size: 20px}
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+</style>
 </head>
 
 <body>
@@ -17,15 +71,21 @@
             </div>
             <div class="placeholder">
                 <a href="service.html">
-                <img src="media/img/logo.jpg" alt="DiCarlo_Logo" >
-            </a>
+                    <img src="media/img/logo.jpg" alt="DiCarlo_Logo">
+                </a>
             </div>
-            <div class="linktab">
-                <a href="index.html">HOME</a>
-                <a href="contact.html">KONTAKT</a>
-                <a href="service.html">ANGEBOTE</a>
-                <a href="media.html">MEDIA</a>
-                <a href="about.html">ABOUT</a>
+            <div class="burger-menu" style="background-color: aliceblue;">
+                &#9776;
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="index.html">HOME</a>
+                    <a href="contact.html">KONTAKT</a>
+                    <a href="service.html">ANGEBOTE</a>
+                    <a href="media.html">MEDIA</a>
+                    <a href="about.html">ABOUT</a>
+                </div>
             </div>
         </div>
 
@@ -44,10 +104,7 @@
                 </summary>
                 <a href="menuonly.html" target="_blank">test</a>
                </details>
-            <p>
 
-                <a href="index2.html" target="_blank">test2 </a>
-            </p>
 
 
                 <br>
@@ -83,18 +140,16 @@
 
     </div>
 
-    <script>
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
 
-document.addEventListener('click', function(event) {
-            var details = document.getElementById('details1');
-            if (!details.contains(event.target)) {
-                details.removeAttribute('open');
-            }
-        });
-</script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
 </body>
 
 </html>
