@@ -73,9 +73,8 @@
                               .join(', ');
             var messaggio = document.getElementById('messaggio').value;
 
-            var whatsappMessage = `Nome: ${nome}%0D%0ATelefono: ${telefono}%0D%0AEmail: ${email}%0D%0AServizi richiesti: ${servizi}%0D%0AMessaggio: ${messaggio}`;
+            var whatsappMessage = `Nome:${nome} Telefono:${telefono} Email:${email} Servizi_richiesti:${servizi} Messaggio:${messaggio}`;
             var whatsappURL = `https://wa.me/4917631207562?text=${encodeURIComponent(whatsappMessage)}`;
-
             window.open(whatsappURL, '_blank');
         });
     </script>
