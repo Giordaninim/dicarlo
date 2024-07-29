@@ -73,6 +73,9 @@
 .right-aside {
     grid-area: right-aside;
     background-color: yellow;
+    iframe {
+        height: 300px;
+    }
 }
 
 .main {
