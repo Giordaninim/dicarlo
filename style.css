@@ -68,6 +68,10 @@
 .left-aside {
     grid-area: left-aside;
     background-color: green;
+    form > select {
+        width: 100%;
+       
+    }
 }
 
 .right-aside {
@@ -82,9 +86,7 @@
     grid-area: main;
     background-color: lightskyblue;
     height: 600px;
-    form > select {
-        width: 100px;
-    }
+    
  }
 
 .low-content {
