@@ -68,8 +68,8 @@
 .left-aside {
     grid-area: left-aside;
     background-color: green;
-    form > select {
-        width: 100%;
+    form > select, form > textarea {
+        width: 75%;
        
     }
 }
