@@ -71,9 +71,12 @@
     </div>
 
     <script>
-        function onlyNumber () {
-            var digits = /^\d+$/;
-            
+        function onlyNumber (event) {
+            var charCode = event.charCode || event.keyCode;
+            if(charCode != 8 && charCode != 46 && charCode != 43 && (charCode < 48 || charCode > 57 )) {
+                event.preventDefault();
+
+            }        
 
         }
 
