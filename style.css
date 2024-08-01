@@ -129,7 +129,7 @@
 
 /* Slideshow container */
 .slideshow-container-right {
-    max-width: 1000px;
+    max-width: auto;
     position: relative;
     margin: auto;
   }
