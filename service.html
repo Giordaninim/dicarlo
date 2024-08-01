@@ -87,7 +87,7 @@
 
                 <div class="mySlides fade">
                 <div class="numbertext">Deluxe Paket</div>
-                <img src="media/img/kl_2.jpg" style="width:120%">
+                <img src="media/img/kl_2.jpg" style="width:100%; height:120%">
                 <div class="text">Caption Three</div>
                 </div>
 
@@ -104,16 +104,19 @@
         <div class="main">
          
             <details  name="angebote"><summary>Eröffnungsangebot</summary>
-            <p>AUßEN HANDWASCHE - INKL FELGEN
-            STAUBSAUGER PLUS KLEINE FLECKEN
-            INNENRAUM ABWISCHEN
-            FENSTER REINIGEN
-            FUR NEUE KUNDE EIN GESCHENK
-            ANGEBOT NUR BIS 7.07 ❗️
-            49.00€ STATT 69.00€</p>
+                <ul class="angebotsListe" style="padding-inline-start:25px; margin:5px; font-weight:normal;"> 
+                    <!-- TODO - bitte ín css.file auslagern, classenname übernehemn -->
+                    <li>Aussen Handwasche - inkl. Felgen</li>
+                    <li>Staubsauger plus kleine Flecken</li>
+                    <li>Innenraum abwischen</li>
+                    <li>Fenster reinigen</li>
+                    <li>Für neue Kunde ein Geschenk</li>
+                </ul>
+                <p style="margin-top:5px;">Angebot nur bis 31.08 ❗️49.00€ statt 69.00€</p>
             </details>
-            <details name="angebote"><summary>Basis Paket</summary>
 
+            <details  name="angebote"><summary>Basis Paket</summary>
+                <!-- TODO bitte alles umformen als Liste und classenname übergeben -->
             -Außenwäsche hand           -Insektenentfernung
             -Felgenreinigung            -Innenreinigung mit
             -Türrahmen-Reinigung        -Polster-/Lederpflege
@@ -122,6 +125,7 @@
             -Kofferraum- & Teppich-Reinigung
                             - Preis auf anfrage -
             </details>
+
             <details name="angebote"><summary>Comfort Paket</summary>
                 Basis-Paket +
             -Kunststoff-Tiefenpflege
@@ -195,7 +199,7 @@
           }
           slides[slideIndex-1].style.display = "block";  
           slides[slideIndex-1].className += " active";
-          setTimeout(showSlides, 1500); // Change image every 2 seconds
+          setTimeout(showSlides, 3500); // Change image every 2 seconds
         }
         </script>
         
