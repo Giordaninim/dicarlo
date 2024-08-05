@@ -11,8 +11,8 @@
          "footer         footer          footer";
      grid-gap: 1px;
      padding: 1px;
-     font-weight: 600;
-     font-size: 20px;
+     /* font-weight: 600; */
+     font-size: 16px;
  }
 
  
@@ -86,7 +86,10 @@
     grid-area: main;
     background-color: lightskyblue;
     height: 600px;
-    
+    p{
+        text-align: justify;
+        padding: 0px 4px 0px 4px;
+    }
     
  }
 
@@ -184,7 +187,7 @@
  
 @media screen and (max-width: 678px) {
     body {
-        margin: 2px;
+        margin: 1px;
     }
 
  .container {
@@ -244,6 +247,7 @@
 
     .main {
         height: 300px;
+        text-align:justify ;
     }
     
     .footer{
