@@ -80,6 +80,20 @@
     iframe {
         height: 500px;
     }
+    .angebotsListe {
+        padding-inline-start:25px;
+        margin:5px;
+        font-weight:normal;
+        display: inline-block;
+        list-style-type: none;
+        padding-right: 10px;
+        li{
+            display: inline-block;
+            list-style-type: none;
+            padding-right: 10px;
+        }
+    }
+    
 }
 
 .main {
