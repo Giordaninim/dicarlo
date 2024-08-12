@@ -102,7 +102,11 @@
     height: 600px;
     p{
         text-align: justify;
-        padding: 0px 4px 0px 4px;
+        padding: 0px 20px 0px 20px;
+        
+    }
+    .preisanfrage{
+        margin-block-start: auto;
     }
     .angebotsListe {
         padding-inline-start:25px;
@@ -114,11 +118,14 @@
     }
     .beinhaltet {
         text-align: right;
-        color: #fea606;
     }
     .folgendes {
-        text-align: left;
-        color: #fea606;
+        text-align: left;  
+    }
+    .paketUnd{
+        text-align: center;
+        margin-block-start: 10px;
+        margin-block-end: 10px;
     }
     
  }
