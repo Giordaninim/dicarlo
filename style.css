@@ -80,7 +80,7 @@
     iframe {
         height: 500px;
     }
-    .angebotsListe {
+    /* .angebotsListe {
         padding-inline-start:25px;
         margin:5px;
         font-weight:normal;
@@ -92,7 +92,7 @@
             list-style-type: none;
             padding-right: 10px;
         }
-    }
+    } */
     
 }
 
@@ -103,6 +103,22 @@
     p{
         text-align: justify;
         padding: 0px 4px 0px 4px;
+    }
+    .angebotsListe {
+        padding-inline-start:25px;
+        margin:5px;
+        font-weight:normal;
+        display: inline-block;
+        list-style-type: square;
+        padding-right: 10px;
+    }
+    .beinhaltet {
+        text-align: right;
+        color: #fea606;
+    }
+    .folgendes {
+        text-align: left;
+        color: #fea606;
     }
     
  }
