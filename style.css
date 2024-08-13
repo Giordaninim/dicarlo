@@ -101,7 +101,7 @@
 .main {
     grid-area: main;
     background-color: #223358;
-    color: #223358;
+    color: #fea606;
     height: 600px;
     p{
         text-align: justify;
@@ -118,6 +118,12 @@
         display: inline-block;
         list-style-type: square;
         padding-right: 10px;
+        span {
+            background-color: #0489a8;
+            color: #0b111d;
+            border-radius: 5%;
+            padding: 0px 1px 0px 1px;
+        }
     }
     .beinhaltet {
         text-align: right;
@@ -130,10 +136,16 @@
         margin-block-start: 10px;
         margin-block-end: 10px;
     }
+    details > p > span {
+        background-color: #0489a8;
+        border-radius: 10%;
+        color: #0b111d;
+    }
     summary > span {
         background-color: #fea606;
         opacity: 0.75;
         border-radius: 25%;
+        color: #223358;
         padding: 1px;
     }
     
