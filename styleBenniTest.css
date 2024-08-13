@@ -1,3 +1,5 @@
+
+
 *,
 *::after,
 *::before {
@@ -87,4 +89,8 @@
     pointer-events: none;
     z-index: 100;
     box-shadow: 1px 1px 1px hsl(0, -50%, 2%, .5);
+}
+
+body {
+    background-color: #223358;
 }
