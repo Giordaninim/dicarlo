@@ -321,6 +321,10 @@
             margin: 1px 2px 0px 0px;
             text-align: center;
         }
+        #summary {
+            margin: 3px;
+        
+        }
 
     }
     
