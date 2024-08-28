@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
-   
+
 </head>
 <body style="background-color: #223358;">
     <div class="container" style="background-color: #223358;">
@@ -36,36 +36,37 @@
         </div>
         <div class="right-aside" style="background-color: #223358;">
             
-        </div>    
+</div>    
         <div class="main">
-            <p><pre>
-        **Impressum**
-        **Angaben gemäß § 5 TMG:**
-        DiCarlo Autoaufbereitung  
-        Derchinger Str. 141  
-        86165 Augsburg  
-        Deutschland
-        **Vertreten durch:**
-        Geschäftsführer: Dicarlo Davide
-        **Kontakt:**
-        Telefon: +49 176 58152715  
-        E-Mail: davidedicarlo.autoaufbereitung@gmail.com
-        **Registereintrag:**
-        Eintragung im Handelsregister.  
-        Registergericht: Amtsgericht Augsburg  
-        Registernummer: HRB 12345
-        **Umsatzsteuer-ID:**
-        Umsatzsteuer-Identifikationsnummer gemäß §27 a 
-        Umsatzsteuergesetz: DE123456789
-        **Verantwortlich für den Inhalt 
-        nach § 55 Abs. 2 RStV:**
-        Dicarlo Davide  
-        Derchinger Str. 141  
-        86165 Augsburg  
-        Deutschland     </pre>
+            <p>
+<pre> 
+   **Impressum**
+   **Angaben gemäß § 5 TMG:**
+DiCarlo Autoaufbereitung  
+Derchinger Str. 141  
+86165 Augsburg  
+Deutschland
+   **Vertreten durch:**
+Geschäftsführer: Dicarlo Davide
+   **Kontakt:**
+Telefon: +49 176 58152715  
+E-Mail:
+davidedicarlo.autoaufbereitung@gmail.com
+   **Registereintrag:**
+Eintragung im Handelsregister.  
+Registergericht: nicht vorhanden  
+Registernummer: nicht vorhanden 
+   **Umsatzsteuer-ID:**
+Umsatzsteuer-Identifikationsnummer gemäß §27 a 
+Umsatzsteuergesetz: nicht vorhanden 
+   **Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:**
+Dicarlo Davide  
+Derchinger Str. 141  
+86165 Augsburg  
+Deutschland</pre>
             </p>
         </div>
-       
+    
         <div class="footer">
             <div class="linkfooter">
                 <a href="index.html">HOME</a>
@@ -78,18 +79,18 @@
                 <span>
                 <a href="https://www.instagram.com/autopflege_decarlo" target="_blank">
                     <img src="media/img/tiny-instagram-icon-0.jpg" alt="insta"></a>  
-               
+            
                 <a href="https://www.tiktok.com/@autopflegedecarlo" target="_blank">
                     <img src="media/img/logo_tiktok.webp" alt="tiktok"></a>
                 <a href="https://api.whatsapp.com/send?phone=4917658152715" target="_blank">
                     <img id="wapp" src="media/img/icon_whatsapp.jpg" alt="wapp"></a>
                 </span>
- 
+
             </div>
- 
- 
- 
- 
+
+
+
+
         </div>    
 
     </div>
@@ -112,8 +113,8 @@
             var telefono = document.getElementById('telefono').value;
             var email = document.getElementById('email').value;
             var servizi = Array.from(document.getElementById('servizi').selectedOptions)
-                              .map(option => option.value)
-                              .join(', ');
+                            .map(option => option.value)
+                            .join(', ');
             var messaggio = document.getElementById('messaggio').value;
 
             var whatsappMessage = `Nome:${nome} Telefono:${telefono} Email:${email} Servizi_richiesti:${servizi} Messaggio:${messaggio}`;
