@@ -6,7 +6,7 @@
     <title>Angebot</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
-   
+
 </head>
 <body>
     <div class="container">
@@ -21,25 +21,25 @@
             </div>
             <div class="linktab">
                 <a href="index.html">HOME</a>
-               
+            
                 <a href="service.html">ANGEBOTE</a>
                 <a href="media.html">MEDIA</a>
                 <a href="about.html">ABOUT</a>
             </div>
         </div>
- 
+
         <div class="left-aside">
-           
+        
             <form id="contact-form">
                 <label for="nome">Name:</label><br>
                 <input type="text" id="nome" name="nome" required><br>
-       
+    
                 <label for="telefon">Telefon:</label><br>
                 <input type="tel" id="telefon" name="telefon" onkeypress="onlyNumber(event)" required><br>
-       
+    
                 <label for="email">E-mail:</label><br>
                 <input type="email" id="email" name="email"><br>
-       
+    
                 <label for="servizi">Gewünschtes Angebot:</label><br>
                 <select id="servizi" name="servizi[]" size="5">
                     <option value="servizio1">Basis</option>
@@ -48,10 +48,10 @@
                     <option value="servizio4">Flecken</option>
                     <option value="servizio5">Anderes</option>
                 </select><br>
-       
+    
                 <label for="messaggio">Nachricht oder Mitteilung:</label><br>
                 <textarea id="messaggio" name="messaggio" rows="4" cols="30" placeholder="Deine Mitteilung..."></textarea><br>
-       
+    
                 <input type="submit" value="Send">
             </form>
         </div>
@@ -65,46 +65,48 @@
                 Autoaufbereitungsservice  -  Angebote  - Basis Paket - Comfort Paket - Deluxe Paket - Fleckenentfernung -    
             </marquee></div>
         <div class="right-aside">
-           
+        
             <div class="slideshow-container-right">
- 
-               <!--  <div class="mySlides fade">
+
+            <!--  <div class="mySlides fade">
                 <div class="numbertext">Sommer Angebot</div>
                 <img src="media/img/angebot_1.webp" style="width:100%">
                 <div class="text">Caption Text</div>
                 </div> -->
- 
+
                 <div class="mySlides fade">
                 <div class="numbertext">Basis Paket</div>
                 <img src="media/img/md_1.jpg" style="width:100%">
                 <div class="text">Caption Text</div>
                 </div>
- 
+
                 <div class="mySlides fade">
                 <div class="numbertext">Comfort Paket</div>
                 <img src="media/img/kl_1.jpg" style="width:100%">
                 <div class="text">Caption Two</div>
                 </div>
- 
+
                 <div class="mySlides fade">
                 <div class="numbertext">Deluxe Paket</div>
                 <img src="media/img/kl_1.jpg" style="width:100%">
                 <div class="text">Caption Three</div>
                 </div>
- 
+
             </div>
             <br>
- 
+
             <!-- <div class="dots-right" style="text-align:center">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
-                 
+                
             </div> -->
         </div>    
         <div class="main">
          <!-- TODO bitte alle header ersetzen anhand von header aus dieser Seite // ERLEDIGT  -->
          <!-- TODO bitte alle footer ersetzen anhand von footer aus dieser Seite // ERLEDIGT -->
+
+            <details  name="angebote"><summary> <span>Eröffnungsangebot</span></summary>
  
             <details  name="angebote"><summary id="summary"> <span>Eröffnungsangebot</span></summary>
                 <ul class="angebotsListe">
@@ -152,15 +154,15 @@
                         </tr>
                         
                     </table> 
-                 
-                 <p class="preisanfrage" >- Preis auf anfrage -</p>
+                
+                <p class="preisanfrage" >- Preis auf anfrage -</p>
                             
             </details>
  
             <details name="angebote"><summary id="summary"> <span>Comfort Paket</span></summary>
                 <h4 class="paketUnd">Basis-Paket und dazu... </h4>
                 <ul class="angebotsListe">
-                   
+                
                     <li><span>Kunststoff-Tiefenpflege</span></li>
                     <li><span>Teppich-Shampoonierung & Reinigung</span></li>
                     <li><span>Felgenreinigung Glanzpolitur</span></li>
@@ -186,8 +188,8 @@
                 Kontaktieren Sie uns am besten sofort, damit wir schnellstmöglich einen Termin vereinbaren!</span>
                 </p>
             </details>
- 
-               
+
+            
         </div>
         <div class="low-content">Low Content</div>
         <div class="footer">
@@ -202,20 +204,20 @@
                 <span>
                 <a href="https://www.instagram.com/autopflege_decarlo" target="_blank">
                     <img src="media/img/tiny-instagram-icon-0.jpg" alt="insta"></a>  
-               
+            
                 <a href="https://www.tiktok.com/@autopflegedecarlo" target="_blank">
                     <img src="media/img/logo_tiktok.webp" alt="tiktok"></a>
                 <a href="https://api.whatsapp.com/send?phone=4917658152715" target="_blank">
                     <img id="wapp" src="media/img/icon_whatsapp.jpg" alt="wapp"></a>
                 </span>
- 
+
             </div>
- 
- 
- 
- 
+
+
+
+
         </div>    
- 
+
     </div>
 <script>
     function onlyNumber (event) {
@@ -230,8 +232,8 @@
     var telefon = document.getElementById('telefon').value;
     var email = document.getElementById('email').value;
     var servizi = Array.from(document.getElementById('servizi').selectedOptions)
-                      .map(option => option.value)
-                      .join(', ');
+                    .map(option => option.value)
+                    .join(', ');
     var messaggio = document.getElementById('messaggio').value;
     var whatsappMessage = `Nome:${nome} Telefono:${telefono} Email:${email} Servizi_richiesti:${servizi} Messaggio:${messaggio}`;
     var whatsappURL = `https://wa.me/4917631207562?text=${encodeURIComponent(whatsappMessage)}`;
@@ -240,7 +242,7 @@
 );
 let slideIndex = 0;
         showSlides();
-       
+    
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
