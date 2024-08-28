@@ -14,6 +14,7 @@
      padding: 1px;
      /* font-weight: 600; */
      font-size: 16px;
+     font-family: "Source Sans Pro", "Courier New", monospace;
  }
 
  
@@ -124,6 +125,7 @@
             color: #0b111d;
             border-radius: 5%;
             padding: 0px 1px 0px 1px;
+            font-size: small;
         }
     }
     .beinhaltet {
@@ -143,11 +145,15 @@
         color: #0b111d;
     }
     summary > span {
-        background-color: #fea606;
-        opacity: 0.75;
-        border-radius: 25%;
-        color: #223358;
-        padding: 1px;
+            background-color: #fea606;
+            opacity: 0.75;
+            border-radius: 25%;
+            color: #223358;
+            padding: 1px;
+        }
+    #summary {
+        margin: 3px;
+    
     }
     
  }
@@ -155,6 +161,7 @@
 .low-content {
     grid-area: low-content;
     background-color: red;
+    display: none;    
 }
 
 .footer {
@@ -292,7 +299,6 @@
             a {
             color: #0b111d;
             font-size: xx-small;
-            font-family: "Source Sans Pro", "Courier New", monospace;
             }
         }
     }
@@ -307,12 +313,20 @@
     .main {
         height: 300px;
         text-align:justify ;
+        #disclaimer {
+            font-size: 7px;
+            margin-top: 4px;
+        }
+        h6 {
+            margin: 1px 2px 0px 0px;
+            text-align: center;
+        }
+
     }
     
     .footer{
         padding-left: 20px;
         font-size: xx-small;
-        font-family: "Source Sans Pro", "Courier New", monospace;
         justify-content: flex-start;
         .social > span > a> img {
             width: 32px;
