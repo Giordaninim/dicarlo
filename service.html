@@ -33,27 +33,30 @@
             <form id="contact-form">
                 <label for="nome">Name:</label><br>
                 <input type="text" id="nome" name="nome" required><br>
-    
+            
                 <label for="telefon">Telefon:</label><br>
-                <input type="tel" id="telefon" name="telefon" onkeypress="onlyNumber(event)" required><br>
-    
+                <input type="tel" id="telefon" name="telefon" pattern="{0-9}{16}" onkeypress="onlyNumber(event)" required><br>
+            
                 <label for="email">E-mail:</label><br>
-                <input type="email" id="email" name="email"><br>
-    
+                <input type="email" id="email" name="email" placeholder="yourname@example.com"><br>
+            
                 <label for="servizi">Gewünschtes Angebot:</label><br>
                 <select id="servizi" name="servizi[]" size="5">
                     <option value="servizio1">Basis</option>
                     <option value="servizio2">Comfort</option>
                     <option value="servizio3">Deluxe</option>
                     <option value="servizio4">Flecken</option>
-                    <option value="servizio5">Anderes</option>
+                    <option value="servizio5" selected="selected">Anderes</option>
                 </select><br>
-    
+            
                 <label for="messaggio">Nachricht oder Mitteilung:</label><br>
                 <textarea id="messaggio" name="messaggio" rows="4" cols="30" placeholder="Deine Mitteilung..."></textarea><br>
-    
+            
                 <input type="submit" value="Send">
             </form>
+            
+            
+            
         </div>
         <div class="banner">
             <marquee behavior="scroll" direction="left">
@@ -76,19 +79,19 @@
 
                 <div class="mySlides fade">
                 <div class="numbertext">Basis Paket</div>
-                <img src="media/img/md_1.jpg" style="width:100%">
+                <img src="media/img/md_1.jpg" style="width:100%" loading="lazy">
                 <div class="text">Caption Text</div>
                 </div>
 
                 <div class="mySlides fade">
                 <div class="numbertext">Comfort Paket</div>
-                <img src="media/img/kl_1.jpg" style="width:100%">
+                <img src="media/img/kl_1.jpg" style="width:100%" loading="lazy">
                 <div class="text">Caption Two</div>
                 </div>
 
                 <div class="mySlides fade">
                 <div class="numbertext">Deluxe Paket</div>
-                <img src="media/img/kl_1.jpg" style="width:100%">
+                <img src="media/img/kl_1.jpg" style="width:100%" loading="lazy">
                 <div class="text">Caption Three</div>
                 </div>
 
@@ -156,7 +159,6 @@
                 <p class="preisanfrage" >- Preis auf anfrage -</p>
                             
             </details>
- 
             <details name="angebote"><summary  id="summary"> <span>Comfort Paket</span></summary>
 
                 <h4 class="paketUnd">Basis-Paket und dazu... </h4>
@@ -219,12 +221,12 @@
 
     </div>
 <script>
-    function onlyNumber (event) {
-    var charCode = event.charCode || event.keyCode;
-    if(charCode != 8 && charCode != 46 && charCode != 43 && (charCode < 48 || charCode > 57 )) {
-        event.preventDefault();
-    }
-};
+        function onlyNumber(event) {
+            var charCode = (event.which) ? event.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                event.preventDefault();
+            }
+        }
     document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault(); // Previene l'invio normale del form
     var nome = document.getElementById('nome').value;
