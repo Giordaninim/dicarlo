@@ -31,8 +31,8 @@
         <div class="left-aside">
         
             <form id="contact-form">
-                <label for="nome">Name:</label><br>
-                <input type="text" id="nome" name="nome" required><br>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
             
                 <label for="telefon">Telefon:</label><br>
                 <input type="tel" id="telefon" name="telefon" pattern="{0-9}{16}" onkeypress="onlyNumber(event)" required><br>
@@ -49,8 +49,8 @@
                     <option value="servizio5" selected="selected">Anderes</option>
                 </select><br>
             
-                <label for="messaggio">Nachricht oder Mitteilung:</label><br>
-                <textarea id="messaggio" name="messaggio" rows="4" cols="30" placeholder="Deine Mitteilung..."></textarea><br>
+                <label for="message">Nachricht oder Mitteilung:</label><br>
+                <textarea id="message" name="message" rows="4" cols="30" placeholder="Deine Mitteilung..."></textarea><br>
             
                 <input type="submit" value="Send">
             </form>
@@ -221,29 +221,31 @@
 
     </div>
 <script>
-        function onlyNumber(event) {
-            var charCode = (event.which) ? event.which : event.keyCode;
-            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-                event.preventDefault();
-            }
+function onlyNumber(event) {
+    var charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        event.preventDefault();
         }
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
+    }
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault(); // Previene l'invio normale del form
-    var nome = document.getElementById('nome').value;
+    var name = document.getElementById('name').value;
     var telefon = document.getElementById('telefon').value;
     var email = document.getElementById('email').value;
     var servizi = Array.from(document.getElementById('servizi').selectedOptions)
                     .map(option => option.value)
                     .join(', ');
-    var messaggio = document.getElementById('messaggio').value;
-    var whatsappMessage = `Nome:${nome} Telefono:${telefono} Email:${email} Servizi_richiesti:${servizi} Messaggio:${messaggio}`;
+    var message = document.getElementById('message').value;
+    var whatsappMessage = `name:${name} Telefon:${telefon} Email:${email} Servizi_richiesti:${servizi} message:${message}`;
     var whatsappURL = `https://wa.me/4917631207562?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappURL, '_blank');
     }
-);
+    );
+
 let slideIndex = 0;
-        showSlides();
-    
+    showSlides();
+
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
@@ -261,7 +263,8 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";  
     slides[slideIndex-1].className += " active";
     setTimeout(showSlides, 3500); // Change image every 2 seconds
-};
+    };
+
 </script>
 </body>
 </html>
